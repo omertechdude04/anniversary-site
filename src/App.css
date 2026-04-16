@@ -1,0 +1,93 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: black;
+}
+
+/* MAIN */
+.main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* IMAGE WRAPPER (this fixes centering) */
+.image-container {
+  position: relative;
+  height: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMAGE */
+.bg-image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* OVERLAY (only on image area) */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+/* CONTENT */
+.content {
+  position: absolute;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  max-width: 700px;
+  z-index: 2;
+}
+
+/* TEXT */
+h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.message {
+  font-size: 18px;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+/* BUTTON */
+button {
+  margin-top: 30px;
+  padding: 14px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .message {
+    font-size: 15px;
+  }
+}
